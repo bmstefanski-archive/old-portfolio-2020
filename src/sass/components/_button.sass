@@ -1,0 +1,29 @@
+.button
+  display: flex
+  justify-content: center
+  align-items: center
+
+  text-decoration: none
+  color: #1c2260
+
+  height: 6rem
+  padding: 0 3rem
+  border: 0.2rem solid #1c2260
+  border-radius: .75rem
+
+  font-size: 1.4rem
+  transition: all .3s
+  backface-visibility: hidden
+
+  &--resume
+    margin-left: 2rem
+
+    &:hover
+      transform: scale(1.05)
+
+  &:visited, &:focus, &:active
+    text-decoration: none
+    color: #1c2260
+
+  &:hover
+    background-color: lighten(#B3BCF5, 13%)
