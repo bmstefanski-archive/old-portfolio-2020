@@ -1,9 +1,62 @@
 #about-me
   display: flex
   flex-direction: column
+
   background: darken(#F4F6F8, 1%)
-  height: 40rem
   transform: skewY(-7deg)
 
   & > *
     transform: skewY(7deg)
+
+  .section-content
+    justify-content: center
+
+    & > *
+      flex: 50%
+
+  .about-me-content
+    font-size: 1.6rem
+
+    p
+      margin-bottom: 1.5rem
+
+  .about-me-picture
+    will-change: transform
+
+    img
+      display: block
+      margin: 0 auto
+      border: .3rem solid #1c2260
+      border-radius: .5rem
+      transition: all .3s
+
+      &:hover
+        transform: scale(1.08)
+        filter: opacity(90%)
+
+  .tech-stack
+    display: flex
+    margin-top: 3rem
+
+    .tech-stack-item
+      font-size: 1.3rem
+
+      &::before
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
+        display: inline-block
+        content: '→'
+        margin-right: 1rem
+        color: #1c2260
+        font-weight: 900
+
+    ul
+      list-style: none
+
+      &:not(:last-child)
+        margin-right: 5rem
+
+      &::before
+        display: block
+        content: attr(title)
+        margin-bottom: 1rem
+        font-size: 1.8rem
