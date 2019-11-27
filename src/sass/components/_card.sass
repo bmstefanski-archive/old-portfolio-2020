@@ -1,0 +1,48 @@
+.cards-container
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+
+  width: 100%
+
+  & > *:not(:last-child)
+    margin-right: 2rem
+
+.card
+  width: 35rem
+  padding: 3rem 2.5rem
+  border-radius: .3rem
+  box-shadow: 0 .3rem .3rem rgba(0,0,0,.13), .1rem .2rem .2rem rgba(0,0,0,.1) , -.1rem -.2rem .2rem rgba(0,0,0,.05)
+  transition: transform .15s
+
+  &:hover
+    transform: translateY(-.75rem)
+
+.card-title
+  font-size: 2.5rem
+  margin-bottom: 1.5rem
+
+.card-subtitle
+  font-size: 1.6rem
+  display: flex
+  justify-content: space-between
+
+  p:first-child
+    font-weight: 900
+    color: #1c2260
+
+.responsibilities-list
+  list-style: none
+  font-size: 1.3rem
+  margin-top: 1.5rem
+
+  li
+    margin-bottom: .5rem
+
+    &::before
+      display: inline-block
+      font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
+      content: '▹'
+      color: #1c2260
+      font-weight: 900
+      font-size: 1.8rem
