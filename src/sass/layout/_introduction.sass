@@ -3,6 +3,10 @@
   flex-direction: column
   margin-bottom: 5rem
 
+  @media (max-width: 48.0625em)
+    margin: 10rem 0
+    padding: 0 3rem
+
   h1
     font-size: 1.6rem
     margin-bottom: 2rem
@@ -19,7 +23,12 @@
     margin: 5rem 0
     font-size: 1.6rem
     max-width: 45%
+    @media (max-width: 48.0625em)
+      max-width: 100%
 
   .introdcution-buttons-list
     display: flex
     align-items: center
+    @media (max-width: 48.0625em)
+      justify-content: center
+      flex-wrap: wrap

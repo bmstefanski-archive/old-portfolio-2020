@@ -16,6 +16,9 @@
 
   .about-me-picture
     will-change: transform
+    @media (max-width: 48.0625em)
+      order: -1
+      margin-bottom: 5rem
 
     img
       display: block
@@ -31,6 +34,8 @@
   .tech-stack
     display: flex
     margin-top: 3rem
+    @media (max-width: 48.0625em)
+      flex-wrap: wrap
 
     .tech-stack-item
       font-size: 1.3rem
@@ -45,9 +50,14 @@
 
     ul
       list-style: none
+      @media (max-width: 48.0625em)
+        margin-bottom: 3rem
+        flex: 50%
 
       &:not(:last-child)
         margin-right: 5rem
+        @media (max-width: 48.0625em)
+          margin-right: 0
 
       &::before
         display: block
