@@ -42,7 +42,6 @@
     top: 0
     right: 0
     display: flex
-    margin-bottom: 10rem
     z-index: 10002
 
     .navigation-checkbox
@@ -50,7 +49,7 @@
 
     .navigation-button
       cursor: pointer
-      height: 6rem
+      height: 100%
       width: 7rem
       position: relative
       z-index: 10002
@@ -65,7 +64,7 @@
 
     .navigation-background
       height: 6rem
-      width: 7rem
+      width: 0
       position: fixed
       top: 0
       right: 0
@@ -88,6 +87,7 @@
       background-color: transparent
 
     .navigation-checkbox:checked ~ .navigation-background
+      width: 7rem
       transform: scale(50)
 
     .navigation-checkbox:checked ~ nav
