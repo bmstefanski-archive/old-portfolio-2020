@@ -5,6 +5,7 @@
 @import './about-me'
 @import './experience'
 @import './projects'
+@import './other-projects'
 
 .section-title
   padding: 5rem
@@ -29,6 +30,12 @@
     background-color: #1c2260
     height: .2rem
     width: 5rem
+
+.section-subtitle
+  @extend .section-title
+  &::before
+    counter-increment: subsection
+    content: "0" counter(section) "." counter(subsection)  "."
 
 .section-content
   display: flex

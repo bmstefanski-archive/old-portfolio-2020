@@ -14,7 +14,16 @@
   border-radius: .75rem
 
   font-size: 1.4rem
-  transition: transform .3s
+  transition: all .3s
+
+  &--see-live
+    background-color: lighten(#B3BCF5, 13%)
+
+    &:hover
+      color: lighten(#B3BCF5, 13%) !important
+      border: 0.2rem solid lighten(#B3BCF5, 13%)
+      background-color: #1c2260
+      transform: translateY(-.4rem)
 
   &--resume
     margin-left: 2rem
