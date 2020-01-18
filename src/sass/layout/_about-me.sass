@@ -15,21 +15,39 @@
       margin-bottom: 1.5rem
 
   .about-me-picture
-    will-change: transform
+    display: block
+    position: relative
+    margin: 0 auto
+    width: 30rem
+    height: 30rem
+    overflow: hidden
+    border: .3rem solid #1c2260
+    border-radius: .5rem
+    transition: all .3s
+    img
+      width: 100%
+      height: 100%
+      object-fit: cover
+
+    &::after
+      display: block
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      left: 0
+      content: ''
+      background: rgba(#1c2260, .5)
+      transition: all .3s
+
+    &:hover
+      transform: scale(1.08)
+      &::after
+        background: transparent
+
     @media (max-width: 48.0625em)
       order: -1
       margin-bottom: 5rem
-
-    img
-      display: block
-      margin: 0 auto
-      border: .3rem solid #1c2260
-      border-radius: .5rem
-      transition: all .3s
-
-      &:hover
-        transform: scale(1.08)
-        filter: opacity(90%)
 
   .tech-stack
     display: flex
@@ -63,6 +81,6 @@
         display: block
         color: #1c2260
         font-weight: 900
-        content: attr(title)
+        content: attr(data-title)
         margin-bottom: 1rem
         font-size: 1.8rem
