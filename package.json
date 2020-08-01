@@ -4,9 +4,10 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
+    "start": "gulp",
     "prebuild": "rimraf /dist",
     "build": "gulp build",
-    "deploy": "yarn build && git subtree push --prefix dist origin master"
+    "deploy": "yarn build && git subtree push --prefix dist origin gh-pages"
   },
   "repository": {
     "type": "git",
