@@ -6,8 +6,7 @@
   "scripts": {
     "start": "gulp",
     "prebuild": "rimraf /dist",
-    "build": "gulp build",
-    "deploy": "yarn build && git subtree push --prefix dist origin gh-pages"
+    "build": "gulp build"
   },
   "repository": {
     "type": "git",
