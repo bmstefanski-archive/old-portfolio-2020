@@ -96,8 +96,13 @@ function assets(done) {
   done();
 }
 
+function copyCname(done) {
+  src("CNAME").pipe(dest("dist/"));
+  done();
+}
+
 function build(done) {
-  runSequence("clean", ["html", "css", "js", "img", "assets"]);
+  runSequence("clean", ["html", "css", "js", "img", "assets", copyCname]);
   done();
 }
 
@@ -110,6 +115,7 @@ task("css", css);
 task("js", js);
 task("img", img);
 task("assets", assets);
+task("copyCname", copyCname);
 
 task("default", parallelServe);
 task("reload", reload);
