@@ -5,11 +5,9 @@
   .section-content
     justify-content: center
 
-    & > *
-      flex: 50%
-
   .about-me-content
     font-size: 1.6rem
+    padding-right: 5rem
 
     p
       margin-bottom: 1.5rem
@@ -45,7 +43,7 @@
       &::after
         background: transparent
 
-    @media (max-width: 48.0625em)
+    @media (max-width: 70.625em)
       order: -1
       margin-bottom: 5rem
 
@@ -56,15 +54,17 @@
   .tech-stack
     display: flex
     margin-top: 3rem
-    @media (max-width: 48.0625em)
+    @media (max-width: 70.625em)
       flex-wrap: wrap
+    @media (max-width: 31.25em)
+      flex-direction: column
 
     .tech-stack-item
       font-size: 1.3rem
 
       &::before
-        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
         display: inline-block
+        font-family: Cambria, Cochin, Georgia, Times, Times New Roman, serif
         content: '→'
         margin-right: 1rem
         color: #1c2260
@@ -72,13 +72,13 @@
 
     ul
       list-style: none
-      @media (max-width: 48.0625em)
+      @media (max-width: 70.625em)
         margin-bottom: 3rem
         flex: 50%
 
       &:not(:last-child)
         margin-right: 5rem
-        @media (max-width: 48.0625em)
+        @media (max-width: 70.625em)
           margin-right: 0
 
       &::before
