@@ -4,7 +4,9 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prebuild": "rimraf /dist",
+    "build": "gulp build",
+    "deploy": "yarn build && git subtree push --prefix dist origin master"
   },
   "repository": {
     "type": "git",
@@ -36,5 +38,8 @@
     "gulp4-gh-pages": "^0.6.0-6",
     "gulp4-run-sequence": "^1.0.0",
     "run-sequence": "^2.2.1"
+  },
+  "devDependencies": {
+    "rimraf": "^3.0.2"
   }
 }

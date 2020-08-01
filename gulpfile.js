@@ -83,8 +83,13 @@ function clean() {
   return del([config.dist])
 }
 
+function assets(done) {
+  return src('./src').pipe(dest('./dist'))
+  done()
+}
+
 function build(done) {
-  runSequence('clean', ['html', 'css', 'js', 'img'])
+  runSequence('clean', ['html', 'css', 'js', 'img', 'assets'])
   done()
 }
 
@@ -97,6 +102,7 @@ task('css', css)
 task('js', js)
 task('img', img)
 task('deploy', deploy)
+task('assets', assets)
 
 task('default', parallelServe)
 task('reload', reload)
